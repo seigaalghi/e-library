@@ -33,7 +33,7 @@ curl --location 'localhost:8000/api/v1/login' \
 
 ```
 curl --location 'localhost:8000/api/v1/books?subject=love&page=1&limit=50' \
---header 'Authorization: Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbWVAZ21haWwuY29tIiwiZXhwIjoxNzAxNDAxNDk0LCJpYXQiOjE3MDE0MDA1OTR9.4IhB0A5sGvQc611ykM5MITRx0iDY_fVQTFZK-bYMNpE'
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbWVAZ21haWwuY29tIiwiZXhwIjoxNzAxNDAxNDk0LCJpYXQiOjE3MDE0MDA1OTR9.4IhB0A5sGvQc611ykM5MITRx0iDY_fVQTFZK-bYMNpE'
 ```
 
 ### Lend Book
@@ -45,7 +45,7 @@ curl --location 'localhost:8000/api/v1/books?subject=love&page=1&limit=50' \
 ```
 curl --location 'localhost:8000/api/v1/books/lend' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbWVAZ21haWwuY29tIiwiZXhwIjoxNzAxNDAxNDk0LCJpYXQiOjE3MDE0MDA1OTR9.4IhB0A5sGvQc611ykM5MITRx0iDY_fVQTFZK-bYMNpE' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvbWVAZ21haWwuY29tIiwiZXhwIjoxNzAxNDAxNDk0LCJpYXQiOjE3MDE0MDA1OTR9.4IhB0A5sGvQc611ykM5MITRx0iDY_fVQTFZK-bYMNpE' \
 --data '{
     "edition_number" : "OL38586477M",
     "pickup_date" : "2023-12-10",
