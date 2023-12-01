@@ -14,4 +14,5 @@ func GetString(key string, def string) string {
 var (
 	JwtKey             = GetString("JWT_KEY", "somekey")
 	OpenLibraryBaseUrl = GetString("OPEN_LIBRARY_BASE_URL", "https://openlibrary.org")
+	DBFile             = GetString("DB_FILE", "data.db")
 )

@@ -10,6 +10,6 @@ import (
 
 func EncodeResponseWithData(ctx context.Context, w http.ResponseWriter, response interface{}) error {
 	w.Header().Set("content-type", "application/json")
-	resp := model.BasicResponse{Data: response, Success: true, Message: ""}
+	resp := model.BasicResponse{Data: response, Success: true, Message: "Success"}
 	return json.NewEncoder(w).Encode(resp)
 }

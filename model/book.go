@@ -71,3 +71,60 @@ type Works struct {
 	HasFulltext       bool         `json:"has_fulltext"`
 	Availability      Availability `json:"availability"`
 }
+
+type Book struct {
+	Error             string       `json:"error"`
+	Publishers        []string     `json:"publishers"`
+	NumberOfPages     int          `json:"number_of_pages"`
+	Series            []string     `json:"series"`
+	Pagination        string       `json:"pagination"`
+	LcClassifications []string     `json:"lc_classifications"`
+	Key               string       `json:"key"`
+	Authors           []Authors    `json:"authors"`
+	PublishPlaces     []string     `json:"publish_places"`
+	Contributions     []string     `json:"contributions"`
+	Isbn13            []string     `json:"isbn_13"`
+	Genres            []string     `json:"genres"`
+	SourceRecords     []string     `json:"source_records"`
+	Title             string       `json:"title"`
+	DeweyDecimalClass []string     `json:"dewey_decimal_class"`
+	Notes             Notes        `json:"notes"`
+	Identifiers       Identifiers  `json:"identifiers"`
+	Languages         []Languages  `json:"languages"`
+	Lccn              []string     `json:"lccn"`
+	Subjects          []string     `json:"subjects"`
+	PublishDate       string       `json:"publish_date"`
+	PublishCountry    string       `json:"publish_country"`
+	ByStatement       string       `json:"by_statement"`
+	Works             []Works      `json:"works"`
+	Type              Type         `json:"type"`
+	Covers            []int        `json:"covers"`
+	Ocaid             string       `json:"ocaid"`
+	LocalID           []string     `json:"local_id"`
+	LatestRevision    int          `json:"latest_revision"`
+	Revision          int          `json:"revision"`
+	Created           Created      `json:"created"`
+	LastModified      LastModified `json:"last_modified"`
+}
+type Notes struct {
+	Type  string `json:"type"`
+	Value string `json:"value"`
+}
+type Identifiers struct {
+	Goodreads    []string `json:"goodreads"`
+	Librarything []string `json:"librarything"`
+}
+type Languages struct {
+	Key string `json:"key"`
+}
+type Type struct {
+	Key string `json:"key"`
+}
+type Created struct {
+	Type  string `json:"type"`
+	Value string `json:"value"`
+}
+type LastModified struct {
+	Type  string `json:"type"`
+	Value string `json:"value"`
+}

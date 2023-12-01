@@ -59,8 +59,17 @@ func NewHttpHandler(r *mux.Router) http.Handler {
 		opts...,
 	)
 
+	lendBook := middleware.TransportLogging("lend_book")(edp.LendBook)
+	lendBookHandler := kithttp.NewServer(
+		lendBook,
+		decoder.LendBook,
+		encoder.EncodeResponseWithData,
+		opts...,
+	)
+
 	r.Handle("/login", loginHandler).Methods("POST")
 	r.Handle("/books", getBooksHandler).Methods("GET")
+	r.Handle("/books/lend", lendBookHandler).Methods("POST")
 
 	return r
 }
